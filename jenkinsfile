@@ -5,14 +5,10 @@ pipeline {
         {
             steps
                 {
-                    withMaven(maven: 'maven')
-                    {
-                        sh 'mvn clean compile'
-                        sh 'mvn install'
-                    }
+                    sh 'mvn clean'
                 }
         }
-        
+      
          stage('Testing Stage')
         {
             steps
